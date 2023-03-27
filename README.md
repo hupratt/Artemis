@@ -29,3 +29,5 @@ Run now ? (y/n)y
 
 Gathered credentials are stored in loot.txt.
 
+debug command: 
+python2 -m pdb ./builder.py 'https://github.com/login'
